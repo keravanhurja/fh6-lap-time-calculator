@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lap Time Calculator</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <section class="card main-card">
+      <h1>Lap Time Calculator</h1>
+      <p class="intro">
+        Enter the first lap as a full lap time. Every lap after that is entered as a positive or negative delta from the current best lap.
+      </p>
+
+      <div class="entry-panel">
+        <label id="inputLabel" for="lapInput">First lap time</label>
+        <div class="input-row">
+          <input
+            id="lapInput"
+            type="text"
+            inputmode="text"
+            autocomplete="off"
+            placeholder="00:00.000"
+            aria-describedby="inputHelp errorMessage"
+          />
+          <button id="addLapButton">Add lap</button>
+        </div>
+        <p id="inputHelp" class="hint">
+          Format: <strong>MM:SS.XXX</strong>. After the first lap, deltas may start with <strong>-</strong>, for example <strong>-00:00.350</strong>.
+        </p>
+        <div id="errorMessage" class="error" role="alert"></div>
+      </div>
+
+      <div class="stats-grid" aria-live="polite">
+        <div class="stat">
+          <div class="stat-name">Lap count</div>
+          <div id="lapCount" class="stat-value">0</div>
+        </div>
+        <div class="stat">
+          <div class="stat-name">Average lap</div>
+          <div id="averageLap" class="stat-value">--:--.---</div>
+        </div>
+        <div class="stat">
+          <div class="stat-name">Best lap</div>
+          <div id="bestLap" class="stat-value best-value">--:--.---</div>
+        </div>
+        <div class="stat">
+          <div class="stat-name">Longest lap</div>
+          <div id="longestLap" class="stat-value longest-value">--:--.---</div>
+        </div>
+      </div>
+    </section>
+
+    <aside class="card side-card">
+      <div class="toolbar">
+        <h2>Laps</h2>
+        <button id="clearButton" class="secondary danger">Clear all</button>
+      </div>
+      <div id="lapList" class="lap-list">
+        <div class="empty">Add a full lap time to begin.</div>
+      </div>
+    </aside>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
