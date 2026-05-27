@@ -1,11 +1,11 @@
 :root {
   --bg: #121212;
-  --panel: #08110f;
-  --panel-soft: #0e1715;
+  --panel: #09100f;
+  --panel-soft: #0f1614;
   --text: #f1f1f1;
   --muted: #9ca3af;
-  --border: #181b24;
-  --card-border: #253736;
+  --border: #191c23;
+  --card-border: #273534;
   --accent: #38bdf8;
   --best: #22c55e;
   --longest: #f97316;
@@ -13,8 +13,8 @@
   --radius-card: 16px;
   --radius-control: 12px;
   --shadow:
-    0 0 22px rgba(37, 55, 54, 0.22),
-    0 0 46px rgba(37, 55, 54, 0.12),
+    0 0 22px rgba(39, 53, 52, 0.22),
+    0 0 46px rgba(39, 53, 52, 0.12),
     0 24px 60px rgba(0, 0, 0, 0.58);
 }
 
@@ -27,8 +27,8 @@ body {
   min-height: 100vh;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   background:
-    radial-gradient(circle at top left, rgba(123, 156, 170, 0.08), transparent 32rem),
-    radial-gradient(circle at bottom right, rgba(34, 197, 94, 0.06), transparent 30rem),
+    radial-gradient(circle at top left, rgba(128, 154, 165, 0.08), transparent 32rem),
+    radial-gradient(circle at bottom right, rgba(50, 181, 98, 0.06), transparent 30rem),
     var(--bg);
   color: var(--text);
   display: flex;
@@ -112,7 +112,7 @@ input {
   min-width: 0;
   border: 1px solid var(--border);
   border-radius: var(--radius-control);
-  background: #05070b;
+  background: #06070a;
   color: var(--text);
   padding: 14px 16px;
   font-size: 1.08rem;
@@ -236,7 +236,7 @@ button:active {
   padding: 12px;
   border: 1px solid var(--card-border);
   border-radius: var(--radius-control);
-  background: rgba(17, 22, 32, 0.84);
+  background: rgba(18, 22, 30, 0.84);
 }
 
 .lap-row.best {
